@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" media="print" href="./src/print.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form class="container">
+        <table class="table">
+          <tr>
+            <td>نام مشتری:</td>
+            <td><input placeholder="استاد بدر نژاد" type="text" name="customer" id="customer" /></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <br class="disable-none" />
+              <hr  class="disable-none"/>
+              <br  class="disable-none"/>
+            </td>
+          </tr>
+          <tr class="disable-none">
+            <td>نام محصول</td>
+            <td><input placeholder="سیب" type="text" name="productname" id="productname" /></td>
+          </tr class="disable-none">
+          <tr class="disable-none">
+            <td>فی محصول</td>
+            <td>
+              <input placeholder="تومان" min="1" type="number" name="productprice" id="productprice" />
+            </td>
+          </tr >
+          <tr class="disable-none">
+            <td>تعداد</td>
+            <td>
+              <input placeholder="کیلو گرم" min="1" type="number" name="productQTY" id="productqty" /> <br />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td><input type="button" id="btn" class="btn" value="ثبت" /></td>
+          </tr>
+        </table>
+        <br />
+        <hr />
+        <br />
+        <table class="result-table" id="fantasyTable">
+          <thead>
+            <tr>
+              <th>محصول</th>
+              <th>قیمت</th>
+              <th>تعداد</th>
+              <th>مجموع</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" id="sum"></td>
+            </tr>
+          </tfoot>
+        </table>
+        <br />
+        <input type="button" id="printpg" class="btn" value="چاپ فاکتور" />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
