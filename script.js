@@ -18,6 +18,23 @@ btn.onclick = function () {
   const productname = document.getElementById("productname");
   const productprice = document.getElementById("productprice");
   const productqty = document.getElementById("productqty");
+  if (customer.value == "") {
+    alert("لطفا نام مشتری را وارد کنید!");
+    return;
+  }
+  if (productname.value == "") {
+    alert("لطفا نام محصول را وارد کنید!");
+    return;
+  }
+  if (productprice.value == "") {
+    alert("لطفا فی محصول را وارد کنید!");
+    return;
+  }
+  if (productqty.value == "") {
+    alert("لطفا تعداد را کنید!");
+    return;
+  }
+
   let price = productprice.value * productqty.value;
   sum += price;
 
